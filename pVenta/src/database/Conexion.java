@@ -23,7 +23,9 @@ public class Conexion {
     
     Connection connection;
     
-    public Conexion(){
+    public static Conexion singleConnection;
+    
+    private Conexion(){
         this.connection = null;
     }
     
@@ -48,5 +50,12 @@ public class Conexion {
         catch(SQLException e){
             JOptionPane.showMessageDialog(null, e.getMessage());
         }
+    }
+    
+    public synchronized static Conexion getInstance(){
+        if(singleConnection == null){
+            singleConnection = new Conexion();
+        }
+        return singleConnection;
     }
 }
