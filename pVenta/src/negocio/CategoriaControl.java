@@ -36,7 +36,7 @@ public class CategoriaControl {
         this.registrosMostrados = 0;
         for (Categoria item : lista) {
             if (item.isActivo()) {
-                estado = "activo";
+                estado = "Activo";
             } else {
                 estado = "Inactivo";
             }
