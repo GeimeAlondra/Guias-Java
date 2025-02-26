@@ -150,7 +150,7 @@ public class CategoriaDAO implements CRUDGeneralInterface<Categoria>{
             ps.close();
             rs.close();
         } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, e.getMessage());
+            JOptionPane.showMessageDialog(null, "Creando el objeto");
         }finally{
              ps = null;
              rs = null;
