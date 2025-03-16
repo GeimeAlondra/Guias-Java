@@ -11,7 +11,7 @@ package entidades;
 public class Articulo {
     private int idArticulo;
     private int categoria_id;
-    private int codigo;
+    private String codigo;
     private String nombre;
     private double precio_venta;
     private int stock;
@@ -22,7 +22,7 @@ public class Articulo {
     public Articulo() {
     }
 
-    public Articulo(int idArticulo, int categoria_id, int codigo, String nombre, double precio_venta, int stock, String descripcion, String imagen, boolean estado) {
+    public Articulo(int idArticulo, int categoria_id, String codigo, String nombre, double precio_venta, int stock, String descripcion, String imagen, boolean estado) {
         this.idArticulo = idArticulo;
         this.categoria_id = categoria_id;
         this.codigo = codigo;
@@ -50,11 +50,11 @@ public class Articulo {
         this.categoria_id = categoria_id;
     }
 
-    public int getCodigo() {
+    public String getCodigo() {
         return codigo;
     }
 
-    public void setCodigo(int codigo) {
+    public void setCodigo(String codigo) {
         this.codigo = codigo;
     }
 
@@ -110,4 +110,6 @@ public class Articulo {
     public String toString() {
         return "Articulo{" + "idArticulo=" + idArticulo + ", categoria_id=" + categoria_id + ", codigo=" + codigo + ", nombre=" + nombre + ", precio_venta=" + precio_venta + ", stock=" + stock + ", descripcion=" + descripcion + ", imagen=" + imagen + ", estado=" + estado + '}';
     }
+
+    
 }
